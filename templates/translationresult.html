@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html style="margin:0px;">
+	<head>
+		<title>Computingazrin</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+		.kotak1, .kotak2 {
+			color:white;
+			margin:0px;
+			padding:30px;
+			font-family:Arial;
+			}
+		.kotak1 {
+			background-color:black;
+			padding-bottom:1px;
+			padding-top:2px;
+		}
+		.kotak2 {
+			background-color:#000080;	
+			padding-bottom:5px;
+		}
+		.kotak3, .dnaseq {
+			font-family:Arial;
+			padding:30px;
+		}
+		.kotakmini {
+			border: 2px solid white;
+			border-bottom: none;
+			border-top: none;
+			width: 50%;
+		}
+		.borang {
+			font-family:Arial;
+			Padding:30px;
+			padding-top:10px;
+		}
+		fieldset {
+			 background-color:#CFCFCF;
+		}
+		legend {
+			background-color:#F5F5F5;
+		}
+		a {
+			text-decoration:none;
+			color:white;
+		}
+		.kotakmini th {
+			cursor:pointer;
+		}
+		.kotakmini th:hover {
+			background-color:white;
+		}
+		.kotakmini a:hover {
+			text-decoration:none;
+			color:black;
+		}
+		.kotakmini2 {
+			border: 1px solid black;
+			border-collapse: collapse;
+			width: 50%;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			margin-left: auto;
+			margin-right: auto;
+			table-layout: auto;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="kotak1">
+			<h4>Computing Project&nbsp&nbspMuhamad Azrin Bin Ahmad Zaki (SQF190001)</h4>
+		</div>
+		<div class="kotak2">
+			<h1>BIOINFORMATICS TOOLS</h1>
+			<table class="kotakmini">
+				<tr>
+					<th><a href="{% url 'perumah' %}">TRANSCRIPTION</a></th>
+					<th><a href="{% url 'mukasurat1' %}">TRANSLATION</a></th>
+					<th><a href="{% url 'mukasurat2' %}">GC PERCENTAGE</a></th>
+					<th><a href="{% url 'mukasurat3' %}">PAIRWISE SEQUENCE ALIGNMENT</a></th>
+					<th><a href="{% url 'mukasurat4' %}">REVERSE COMPLEMENT</a></th>
+				</tr>
+			</table>
+		</div>
+		<div class="kotak3">
+			<h1 style="color:#000080">Translation</h1>
+			<p>Translation occurs in the cytoplasm following transcription and, like transcription, has three stages: initiation, elongation and termination.</p>
+			<ul>
+				<li><b>Initiation</b></li>
+				<p>For translation to begin, the start codon 5’AUG must be recognised. At the 5’ cap of mRNA, the small 40s subunit of the ribosome binds. Subsequently, the larger 60s subunit binds to complete the initiation complex.</p>
+				<li><b>Elongation</b></li>
+				<p>The ribosome has two tRNA binding sites; the P site which holds the peptide chain and the A site which accepts the tRNA. Methionine moves from the P site to the A site to bond to new amino acid there, and so the growth of the peptide has begun. The polypeptide chain is built up in the direction from the N terminal (methionine) to the C terminal (the final amino acid).</p>
+				<li><b>Termination</b></li>
+				<p>One of the three stop codons enters the A site. No tRNA molecules bind to these codons so the peptide and tRNA in the P site become hydrolysed releasing the polypeptide into the cytoplasm.</p>	
+			</ul>
+			<h1 style="color:#000080">Result</h1>
+		</div>
+		<div class="dnaseq">
+			<table class="kotakmini2">
+				<thead>
+					<tr>
+						<th style="background-color:#000080;color:white;">DNA or MRNA Translation</th>
+						<th style="background-color:#000080;color:white;">Sequence</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Your DNA or mRNA sequence</td>
+						<td><b>{{ seqdua }}</b></td>
+					</tr>
+					<tr style="background-color:#EEEEEE;">
+						<td>Your Protein sequence</td>
+						<td><b>{{ datasatu }}</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br><br>
+		<div><button onclick="goBack()" style="background-color:#000080;color:white;font-family:Arial;font-size:20px;height:40px;width:100px;margin:auto;display:block;">Back</button></div>
+		<script>
+			function goBack() {
+			window.history.back();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html style="margin:0px;">
+	<head>
+		<title>Computingazrin</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+		.kotak1, .kotak2 {
+			color:white;
+			margin:0px;
+			padding:30px;
+			font-family:Arial;
+			}
+		.kotak1 {
+			background-color:black;
+			padding-bottom:1px;
+			padding-top:2px;
+		}
+		.kotak2 {
+			background-color:#000080;	
+			padding-bottom:5px;
+		}
+		.kotak3 {
+			font-family:Arial;
+			padding:30px;
+		}
+		.kotakmini {
+			border: 2px solid white;
+			border-bottom: none;
+			border-top: none;
+			width: 50%;
+		}
+		.borang {
+			font-family:Arial;
+			Padding:30px;
+			padding-top:10px;
+		}
+		fieldset {
+			 background-color:#CFCFCF;
+		}
+		legend {
+			background-color:#F5F5F5;
+		}
+		a {
+			text-decoration:none;
+			color:white;	
+		}
+		th {
+			cursor:pointer;
+		}
+		th:hover {
+			background-color:white;
+		}
+		a:hover {
+			text-decoration:none;
+			color:black;	
+		</style>
+	</head>
+	<body>
+		<div class="kotak1">
+			<h4>Computing Project&nbsp&nbspMuhamad Azrin Bin Ahmad Zaki (SQF190001)</h4>
+		</div>
+		<div class="kotak2">
+			<h1>BIOINFORMATICS TOOLS</h1>
+			<table class="kotakmini">
+				<tr>
+					<th><a href="{% url 'perumah' %}">TRANSCRIPTION</a></th>
+					<th><a href="{% url 'mukasurat1' %}">TRANSLATION</a></th>
+					<th><a href="{% url 'mukasurat2' %}">GC PERCENTAGE</a></th>
+					<th><a href="{% url 'mukasurat3' %}">PAIRWISE SEQUENCE ALIGNMENT</a></th>
+					<th><a href="{% url 'mukasurat4' %}">REVERSE COMPLEMENT</a></th>
+				</tr>
+			</table>
+		</div>
+		<div class="kotak3">
+			<h1 style="color:#000080">Transcription</h1>
+			<p>Transcription describes the process by which the genetic information contained within DNA is re-written into messenger RNA (mRNA) by RNA polymerase. This mRNA then exits the nucleus, where it provides the basis for the translation of DNA. By controlling the production of mRNA in the nucleus, the cell regulates the rate of gene expression.</p>
+		</div>
+		<div>
+			<form class="borang" action=transcriptionresult method=GET>
+				<fieldset>
+					<legend>STEP 1 - Enter your input sequence</legend>
+					<label for="fname">Please enter your DNA sequence:</label><br><br>
+					<textarea type="text" id="fname" name="dnasequence" rows="10%" cols="253%" style="font-family:Arial;font-size:14px;">DNA SEQUENCE
+					</textarea>
+				 </fieldset>
+				 <br><br>
+				 <fieldset>
+					<legend>STEP 2 - Submit your job</legend>
+					<label for="dnasequence">Click "Submit" to see the DNA transcription</label><br><br>
+					<button type="submit" value="Submit" style="background-color:#000080;color:white;font-family:Arial;font-size:20px;height:40px;width:100px;">Submit</button>					
+				 </fieldset>
+				 <br><br>
+				 <fieldset>
+					<legend>RESET</legend>
+					<label for="fname">Click "Reset" to restore to default version</label><br><br>
+					<button type="reset" value="Reset" style="background-color:#000080;color:white;font-family:Arial;font-size:20px;height:40px;width:100px;">Reset</button>
+					</textarea>
+				 </fieldset>
+				 
+			</form>
+		</div>
+	</body>
+</html>
